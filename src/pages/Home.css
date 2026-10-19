@@ -1,0 +1,100 @@
+
+/* Banner image */
+
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  /* Adjust to your preferred height */
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero-banner-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* Invisible clickable areas */
+.banner-hotspot {
+  position: absolute;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 30px;
+  line-height: normal;
+}
+
+/* Category buttons */
+.category-electronics {
+  left: 9.5%;
+  top: 46%;
+  width: 7%;
+  height: 16%;
+}
+
+.category-fashion {
+  left: 17%;
+  top: 46%;
+  width: 7%;
+  height: 16%;
+}
+
+.category-beauty {
+  left: 24.5%;
+  top: 46%;
+  width: 7%;
+  height: 16%;
+}
+
+.category-sports {
+  left: 32%;
+  top: 46%;
+  width: 7%;
+  height: 16%;
+}
+
+.category-accessories {
+  left: 39.5%;
+  top: 46%;
+  width: 7%;
+  height: 16%;
+}
+
+/* Shop Now button */
+.category-shop-now {
+  left: 17%;
+  top: 67%;
+  width: 20%;
+  height: 10%;
+}
+
+/* Keyboard accessibility */
+.banner-hotspot:focus-visible {
+  outline: 3px solid #0866f5;
+  outline-offset: 2px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 575.98px) {
+  .category-electronics,
+  .category-fashion,
+  .category-beauty,
+  .category-sports,
+  .category-accessories {
+    top: 46%;
+    height: 16%;
+  }
+
+  .category-shop-now {
+    top: 67%;
+    height: 10%;
+  }
+}

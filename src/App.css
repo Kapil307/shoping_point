@@ -1,0 +1,80 @@
+
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 100px 0 !important;
+  background:
+    radial-gradient(ellipse at 80% 40%, rgba(0, 229, 255, 0.18), transparent 38%),
+    radial-gradient(ellipse at 10% 90%, rgba(168, 85, 247, 0.22), transparent 42%),
+    linear-gradient(135deg, #0c1327 0%, #12142a 55%, #091a28 100%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.15;
+  background-image:
+    linear-gradient(rgba(0, 229, 255, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.22) 1px, transparent 1px);
+  background-size: 45px 45px;
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.hero-section .badge {
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 30px;
+  letter-spacing: 0.04em;
+}
+
+.hero-section h1 {
+  max-width: 800px;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.08;
+  font-weight: 800;
+  background: linear-gradient(100deg, #ffffff 25%, #8cefff 65%, #c4a2ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-section .lead {
+  max-width: 620px;
+  color: #b6c5df;
+}
+
+#products {
+  scroll-margin-top: 90px;
+}
+
+#products > .mb-4 {
+  margin-bottom: 32px !important;
+}
+
+#products h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+#products h2::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 10px;
+  background: var(--gradient-primary);
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 65px 0 !important;
+  }
+
+  .hero-section .display-4 {
+    font-size: 2.5rem;
+  }
+}

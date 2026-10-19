@@ -1,0 +1,111 @@
+
+.shopease-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  padding: 12px 0;
+  background: rgba(8, 11, 22, 0.88) !important;
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.shopease-navbar .navbar-brand {
+  color: white;
+  font-size: 1.7rem;
+  letter-spacing: -0.06em;
+}
+
+.shopease-navbar .navbar-brand i {
+  color: var(--neon-cyan) !important;
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.6));
+}
+
+.shopease-navbar .nav-link {
+  position: relative;
+  padding: 10px 9px;
+  color: #b7c4dc;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.shopease-navbar .nav-link:hover,
+.shopease-navbar .nav-link.active {
+  color: var(--neon-cyan);
+}
+
+.shopease-navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 9px;
+  right: 9px;
+  height: 2px;
+  background: var(--neon-cyan);
+  box-shadow: 0 0 8px var(--neon-cyan);
+}
+
+.shopease-search {
+  flex: 1;
+  max-width: 340px;
+}
+
+.shopease-search .form-control {
+  min-width: 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+.shopease-search .btn {
+  min-width: 45px;
+}
+
+.shopease-navbar .navbar-toggler {
+  border-color: var(--border-color);
+}
+
+.shopease-navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
+}
+
+.shopease-navbar .navbar-toggler-icon {
+  filter: hue-rotate(150deg);
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.cart-link .badge {
+  color: #07111c !important;
+  background: var(--neon-cyan) !important;
+}
+
+@media (max-width: 991.98px) {
+  .shopease-navbar .navbar-collapse {
+    padding-top: 12px;
+  }
+
+  .shopease-search {
+    max-width: none;
+    margin: 12px 0 16px !important;
+  }
+
+  .shopease-navbar .nav-link {
+    padding: 10px 4px;
+  }
+
+  .shopease-navbar .nav-link.active::after {
+    left: 0;
+    right: auto;
+    width: 35px;
+  }
+
+  .cart-link {
+    justify-content: flex-start;
+  }
+}
