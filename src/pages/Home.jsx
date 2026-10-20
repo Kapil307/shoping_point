@@ -86,7 +86,7 @@ function Home({ onAddToCart }) {
         aria-label="ShopEase shopping banner"
       >
         <img
-          src="/images/shoease-hero.png"
+          src="/images/shopease-hero.png"
           alt="ShopEase shopping banner"
           className="hero-banner-image"
         />
